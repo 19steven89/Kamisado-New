@@ -11,7 +11,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
 
-public class Main 
+public class AIMain 
 {
 
 	//Dimentions for tiles
@@ -21,6 +21,12 @@ public class Main
 
 	private Tile[][] board = new Tile[Width][Height];
 
+	
+	static char c = 'E';
+	char n = 'E';
+	Paint cOld;
+	Piece kPiece = null;
+	int keyX = 0, keyY = 0, keyOldX = 0, keyOldY = 0;
 
 	//Groups for tiles and pieces
 	private Group tileGroup = new Group();
@@ -136,18 +142,45 @@ public class Main
 
 		return new MoveResult(MoveType.NONE);
 	}
+	
+	
+//	public int validateAIMove()
+//	{
+//		
+//		MoveResult beginPos = new MoveResult(MoveType.NORMAL);
+//		
+//		for(int row = 0; row < Height; row ++)
+//		{
+//			for(int column = 0; column < Height; column ++)
+//			{
+//				if(board[keyX][keyY].getPiece()!= null)
+//				{
+//					beginPos. = column;
+//				}
+//			}
+//			
+//		}
+//		
+//		
+//	}
+//	
+//	
+//	private MoveResult AIMoveUp()
+//	{
+//		
+//		MoveResult endPoint = new MoveResult() 
+//		
+//		return new MoveResult(MoveType.NONE);		
+//		
+//	}
+	
+	
 
 	//Convert from pixel cords and centre's piece
 	private int toBoard(double pixel) 
 	{
 		return (int)(pixel + Tile_Size / 2) / Tile_Size;
 	}
-	
-	static char c = 'E';
-	char n = 'E';
-	Paint cOld;
-	Piece kPiece = null;
-	int keyX = 0, keyY = 0, keyOldX = 0, keyOldY = 0;
 	
 	
 	public static void playerColourDecider(String pyr1Txt, String pyr2Txt)
@@ -169,7 +202,6 @@ public class Main
 		}
 		whitePlayer.showAndWait();
 	}
-		
 		
 	
 	public void startScene(Stage primaryStage, String pyr1Txt, String pyr2Txt)

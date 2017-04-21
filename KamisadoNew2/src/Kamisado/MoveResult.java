@@ -6,6 +6,12 @@ public class MoveResult
 	private MoveType type;
 	private Piece piece;
 	
+	//When there is no piece
+	public MoveResult(MoveType type) 
+	{
+		this(type, null);
+	}
+	
 	public MoveType getType() 
 	{
 		return type;
@@ -14,12 +20,6 @@ public class MoveResult
 	public Piece getPiece() 
 	{
 		return piece;
-	}
-
-	//When there is no piece
-	public MoveResult(MoveType type) 
-	{
-		this(type, null);
 	}
 
 	public MoveResult(MoveType type, Piece piece) 

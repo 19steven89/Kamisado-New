@@ -20,9 +20,8 @@ public class EasyDifficultMenu
 	        nameLabel.setId("bold-label");
 		  
 	        Scene nameScene = new Scene(box, 1000, 600);
-	        Button easyBtn = new Button("\t\t  Easy  \t\t\t");
+	        Button easyBtn = new Button("\t\t    Easy  \t\t\t");
 	        Button difficultBtn = new Button("\t\t  Difficult  \t\t");
-	        Button play = new Button("\t\tPlay Game\t\t");
 	        final Button quit = new Button("\t\tQuit Game\t\t");
 	    
 	        easyBtn.setOnMouseEntered(e -> easyBtn.setStyle("-fx-text-fill:#000000;"));
@@ -31,10 +30,8 @@ public class EasyDifficultMenu
 	        difficultBtn.setOnMouseExited(e -> difficultBtn.setStyle("-fx-background-color: #AB4642;"));
 	        quit.setOnMouseEntered(e -> quit.setStyle("-fx-text-fill:#000000;"));
 	        quit.setOnMouseExited(e -> quit.setStyle("-fx-background-color: #AB4642;"));
-	        
-	        play.setOnMouseEntered(e -> play.setStyle("-fx-text-fill:#000000;"));
-	        play.setOnMouseExited(e -> play.setStyle("-fx-background-color: #AB4642;"));
-	        box.getChildren().addAll(nameLabel, easyBtn, difficultBtn, play, quit);
+	       
+	        box.getChildren().addAll(nameLabel, easyBtn, difficultBtn, quit);
 	        
 	        
 	        //Main newGame = new Main();
